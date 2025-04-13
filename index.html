@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fırat | AI Engineer & Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div class="noise"></div>
+    <div class="cursor-follower"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">F<span class="accent">.</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <div class="hamburger"></div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">
+                        <span class="greeting">Merhaba, I'm</span>
+                        <span class="name">Fırat<span class="accent">.</span></span>
+                    </h1>
+                    <p class="job-title fade-in delay-1">Artificial Intelligence Engineering Student</p>
+                    <p class="intro fade-in delay-2">Building intelligent systems with <span class="accent">8+ years</span> of software development experience.</p>
+                    <div class="cta-container fade-in delay-3">
+                        <a href="#contact" class="btn btn-primary">Get in touch</a>
+                        <a href="#about" class="btn btn-secondary">Learn more</a>
+                    </div>
+                    <div class="tech-stack fade-in delay-4">
+                        <div class="tech-label">Tech Stack</div>
+                        <div class="tech-icons">
+                            <i class="fab fa-react" title="React"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-python" title="Python"></i>
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in delay-2">
+                    <div class="shape-1"></div>
+                    <div class="shape-2"></div>
+                    <div class="shape-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">About me</span>
+                    <h2 class="section-title">Developer with a product-first mindset</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Based in Trabzon, Türkiye, I'm an AI Engineering student with over 8 years of software development experience across multiple domains.</p>
+                        <p>My technical journey spans web development, desktop applications, artificial intelligence, VR, and real-time systems.</p>
+                        <p>Beyond writing code, I focus on building complete products and systems with attention to user experience, system design, and sustainable development practices.</p>
+                        
+                        <div class="expertise-grid">
+                            <div class="expertise-card">
+                                <div class="expertise-icon"><i class="fas fa-code"></i></div>
+                                <h3>Development</h3>
+                                <p>React, Electron.js, Python, JavaScript, Firebase</p>
+                            </div>
+                            <div class="expertise-card">
+                                <div style="width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; align-content: center;" class="expertise-icon"><i class="fas fa-brain"></i></div>
+                                <h3>AI & Systems</h3>
+                                <p>Machine Learning, Real-time Systems, VR Applications</p>
+                            </div>
+                            <div class="expertise-card">
+                                <div class="expertise-icon"><i class="fas fa-paint-brush"></i></div>
+                                <h3>UX Design</h3>
+                                <p>Clean interfaces with subtle animations and thoughtful interactions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-details">
+                        <h3 class="gradient-text">When I'm not coding</h3>
+                        <div class="interests-modern">
+                            <div class="interest-card" data-icon="dumbbell">
+                                <div class="interest-icon-wrapper">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Weightlifting</h4>
+                                    <p>Building strength & discipline</p>
+                                </div>
+                            </div>
+                            <div class="interest-card" data-icon="gamepad">
+                                <div class="interest-icon-wrapper">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Gaming</h4>
+                                    <p>Strategic gameplay & adventures</p>
+                                </div>
+                            </div>
+                            <div class="interest-card" data-icon="crosshairs">
+                                <div class="interest-icon-wrapper">
+                                    <i class="fas fa-crosshairs"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>FPS Games</h4>
+                                    <p>Warzone & CS2 enthusiast</p>
+                                </div>
+                            </div>
+                            <div class="interest-card" data-icon="mask">
+                                <div class="interest-icon-wrapper">
+                                    <i class="fas fa-mask"></i>
+                                </div>
+                                <div class="interest-content">
+                                    <h4>Assassin's Creed</h4>
+                                    <p>Historical adventures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Contact</span>
+                    <h2 class="section-title">Let's work together</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Interested in collaborating or want to discuss potential opportunities?</p>
+                        <p>Feel free to reach out via email or through social media.</p>
+                        
+                        <div class="contact-links">
+                            <a href="mailto:firattunaarslan@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>firattunaarslan@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/e500ky" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/f%C4%B1rat-tuna-arslan-32537b332/" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com/arstechai" target="_blank" rel="noopener" class="contact-link">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" required placeholder=" " rows="5"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="signature">
+                <svg viewBox="0 0 200 100" class="signature-svg">
+                    <path d="M30,80 C60,20 100,20 140,50 C180,80 180,80 190,70" class="signature-path" />
+                </svg>
+                <p class="quote">"Code is poetry written for machines, designed for humans."</p>
+            </div>
+            <div class="footer-content">
+                <div class="logo">F<span class="accent">.</span></div>
+                <div class="copyright">&copy; 2023 Fırat. All rights reserved.</div>
+                <div class="social-links">
+                    <a href="https://github.com/e500ky" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/f%C4%B1rat-tuna-arslan-32537b332/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/arstechai" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
