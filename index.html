@@ -175,20 +175,27 @@
                         </div>
                     </div>
                     
-                    <form class="contact-form">
+                    <form class="contact-form" id="contact-form">
                         <div class="input-group">
-                            <input type="text" id="name" required placeholder=" ">
+                            <input type="text" id="name" name="name" required placeholder=" ">
                             <label for="name">Name</label>
                         </div>
                         <div class="input-group">
-                            <input type="email" id="email" required placeholder=" ">
+                            <input type="email" id="email" name="email" required placeholder=" ">
                             <label for="email">Email</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="message" required placeholder=" " rows="5"></textarea>
+                            <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
                             <label for="message">Message</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
+                        </button>
+                        <div class="form-status">
+                            <p class="success-message"><i class="fas fa-check-circle"></i> Your message has been sent successfully!</p>
+                            <p class="error-message"><i class="fas fa-exclamation-circle"></i> Oops! Something went wrong.</p>
+                        </div>
                     </form>
                 </div>
             </div>
