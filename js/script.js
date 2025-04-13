@@ -124,13 +124,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form submission (prevent default for demo)
-    const contactForm = document.querySelector('.contact-form');
+    // Load EmailJS script dynamically
+    function loadEmailJS() {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+        script.async = true;
+        document.head.appendChild(script);
+        
+        script.onload = function() {
+            // Initialize EmailJS with your user ID
+            emailjs.init('8zbxgTlfF7GNeH5xa') // ⚠️ Replace with your EmailJS user ID
+        };
+    }
+
+    // Call the function to load EmailJS
+    loadEmailJS();
+
+    // Form submission handling with EmailJS
+    const contactForm = document.getElementById('contact-form');
+
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Here you would normally handle form submission
-            alert('Thank you for your message! This is a demo site, so the form is not actually being submitted.');
+            
+            // Show loading state
+            contactForm.classList.add('submitting');
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            
+            // Clear previous status
+            contactForm.classList.remove('success', 'error');
+            
+            // Send the form using EmailJS
+            emailjs
+              .sendForm('service_nuvm4km', 'template_6jr4zub', contactForm)
+              .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text)
+                // Handle success
+                contactForm.classList.add('success')
+                contactForm.reset() // Clear the form
+
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                  contactForm.classList.remove('success')
+                }, 5000)
+              })
+              .catch(function (error) {
+                console.error('FAILED...', error)
+                // Handle error
+                contactForm.classList.add('error')
+              })
+              .finally(() => {
+                // Remove loading state
+                contactForm.classList.remove('submitting')
+                submitBtn.classList.remove('loading')
+                submitBtn.disabled = false
+              })
         });
     }
     
