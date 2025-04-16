@@ -1,4 +1,3 @@
-/* Light Theme (Default) */
 :root {
     --text-primary: #1a1a2e;
     --text-secondary: #4a4a6a;
@@ -21,7 +20,6 @@
     --shape-3-color: rgba(66, 153, 235, 0.15);
 }
 
-/* Dark Theme */
 .dark-theme {
     --text-primary: #e9ecef;
     --text-secondary: #adb5bd;
@@ -44,7 +42,6 @@
     --shape-3-color: rgba(116, 198, 252, 0.2);
 }
 
-/* Theme Specific Styles */
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -188,7 +185,6 @@ a {
     background-color: var(--text-accent);
 }
 
-/* Theme Toggle Button */
 #theme-toggle {
     background: transparent;
     border: none;

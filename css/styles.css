@@ -36,7 +36,6 @@ body {
     position: relative;
 }
 
-/* Noise overlay */
 .noise {
     position: fixed;
     top: 0;
@@ -60,7 +59,6 @@ section {
     padding: 100px 0;
 }
 
-/* Typography */
 h1, h2, h3 {
     font-family: var(--font-display);
     font-weight: 800;
@@ -109,7 +107,6 @@ p {
     display: inline-block;
 }
 
-/* Header & Navigation */
 header {
     position: fixed;
     top: 0;
@@ -198,7 +195,6 @@ nav {
     bottom: -8px;
 }
 
-/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -342,7 +338,6 @@ nav {
     transform: translateY(-3px);
 }
 
-/* About Section */
 .section-header {
     margin-bottom: 60px;
     text-align: center;
@@ -546,14 +541,12 @@ nav {
     color: #4F46E5;
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
     .interests-modern {
         grid-template-columns: 1fr;
     }
 }
 
-/* Contact Section */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -619,7 +612,6 @@ nav {
     padding: 0 5px;
 }
 
-/* Form submission styles */
 .form-status {
     margin-top: 15px;
     font-size: 0.9rem;
@@ -672,7 +664,6 @@ nav {
     cursor: not-allowed;
 }
 
-/* Footer */
 footer {
     padding: 50px 0;
     text-align: center;
@@ -731,7 +722,6 @@ footer {
     transition: all var(--transition-fast);
 }
 
-/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -761,7 +751,6 @@ footer {
     }
 }
 
-/* Media Queries */
 @media (max-width: 992px) {
     .hero .container {
         flex-direction: column;
@@ -806,7 +795,6 @@ footer {
         transition: right var(--transition-medium);
         margin: 0;
         background: var(--bg-primary);
-        /* backdrop-filter: blur(10px); */
     }
 
     .nav-links.active {
@@ -858,7 +846,6 @@ footer {
     }
 }
 
-/* Custom cursor */
 .cursor-follower {
     position: fixed;
     width: 20px;

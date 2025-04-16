@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
-    // Check for saved theme preference or use preferred color scheme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList = savedTheme === 'dark' ? 'dark-theme' : 'light-theme';
     } else {
-        // If no saved preference, check system preference
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             body.classList = 'dark-theme';
         }
@@ -24,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Mobile navigation toggle
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     
@@ -35,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle('nav-open');
     });
     
-    // Navigation active state based on scroll position - FIXED
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-link');
     
@@ -52,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // If we're at the bottom of the page, ensure the last section is active
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
             current = sections[sections.length - 1].getAttribute('id');
         }
@@ -65,18 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add click handlers to ensure correct section is marked as active when clicked
     navItems.forEach(item => {
         item.addEventListener('click', function(e) {
-            // Clear active class from all items
             navItems.forEach(navItem => {
                 navItem.classList.remove('active');
             });
             
-            // Add active class to clicked item
             this.classList.add('active');
             
-            // Optional: smooth scroll to section
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             
@@ -92,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', setActiveNavItem);
     
-    // Custom cursor
     const cursorFollower = document.querySelector('.cursor-follower');
     
     if (window.innerWidth > 991) {
@@ -124,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Load EmailJS script dynamically
     function loadEmailJS() {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
@@ -132,51 +120,41 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(script);
         
         script.onload = function() {
-            // Initialize EmailJS with your user ID
-            emailjs.init('8zbxgTlfF7GNeH5xa') // ⚠️ Replace with your EmailJS user ID
+            emailjs.init('8zbxgTlfF7GNeH5xa')
         };
     }
 
-    // Call the function to load EmailJS
     loadEmailJS();
 
-    // Form submission handling with EmailJS
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Show loading state
             contactForm.classList.add('submitting');
             const submitBtn = contactForm.querySelector('.submit-btn');
             submitBtn.classList.add('loading');
             submitBtn.disabled = true;
             
-            // Clear previous status
             contactForm.classList.remove('success', 'error');
             
-            // Send the form using EmailJS
             emailjs
               .sendForm('service_nuvm4km', 'template_6jr4zub', contactForm)
               .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text)
-                // Handle success
                 contactForm.classList.add('success')
-                contactForm.reset() // Clear the form
+                contactForm.reset()
 
-                // Reset form after 5 seconds
                 setTimeout(() => {
                   contactForm.classList.remove('success')
                 }, 5000)
               })
               .catch(function (error) {
                 console.error('FAILED...', error)
-                // Handle error
                 contactForm.classList.add('error')
               })
               .finally(() => {
-                // Remove loading state
                 contactForm.classList.remove('submitting')
                 submitBtn.classList.remove('loading')
                 submitBtn.disabled = false
@@ -184,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Simple parallax effect for the shapes
     if (window.innerWidth > 768) {
         window.addEventListener('mousemove', (e) => {
             const shapes = document.querySelectorAll('.shape-1, .shape-2, .shape-3');
@@ -201,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Signature animation when it comes into view
     const signature = document.querySelector('.signature-svg');
     
     const observer = new IntersectionObserver((entries) => {
@@ -216,6 +192,5 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(signature);
     }
     
-    // Initialize active nav state on page load
     setActiveNavItem();
 });
