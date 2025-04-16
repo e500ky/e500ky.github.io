@@ -568,6 +568,7 @@ nav {
     padding: 10px 5px;
     border-radius: var(--border-radius);
     transition: all var(--transition-fast);
+    padding-left: 10px;
 }
 
 .contact-link i {
