@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme) {
     body.classList = savedTheme === 'dark' ? 'dark-theme' : 'light-theme'
+    if (savedTheme === 'dark') {
+      document.getElementById('signature-path').setAttribute('fill', '#ffffff')
+    } else {
+      document.getElementById('signature-path').setAttribute('fill', '#000')
+    }
   } else {
     if (
       window.matchMedia &&
