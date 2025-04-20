@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function setActiveNavItem() {
         let current = '';
-        let scrollPosition = window.scrollY + 200; // Add offset for better section detection
+        let scrollPosition = window.scrollY + 200;
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
