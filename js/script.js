@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (body.classList.contains('dark-theme')) {
             body.classList.replace('dark-theme', 'light-theme');
             localStorage.setItem('theme', 'light');
+            document.getElementById('signature-path').ATTRIBUTE_NODEsetAttribute('fill', '#000000');
         } else {
             body.classList.replace('light-theme', 'dark-theme');
             localStorage.setItem('theme', 'dark');
+            document.getElementById('signature-path').ATTRIBUTE_NODEsetAttribute('fill', '#ffffff');
         }
     });
     
